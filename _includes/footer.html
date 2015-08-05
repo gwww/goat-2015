@@ -1,0 +1,68 @@
+<footer>
+    <div id="contact" class="contact">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-left">
+                    <h1>Contact us today</h1>
+                    <!-- <h3 class="tight">For more information...</h3> -->
+                    <h3><a href="mailto:hello@goagiletour.ca"
+                            title="Email us">hello@goagiletour.ca</a></h3>
+                    <ul class="list-inline">
+                        <li><a class="fa fa-twitter fa-lg fa-border"
+                            href="http://twitter.com/GOAgileTour"
+                            title="Find us on Twitter"></a></li>
+                        <li><a class="fa fa-facebook fa-lg fa-border"
+                            href="http://www.facebook.com/goat"
+                            title="Find us on Facebook"></a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-8 col-md-offset-2 text-center">
+                    <p class="small">&copy; 
+                        <a href="http://goagiletour.ca">Agile Ottawa and Gatineau-Ottawa Agile Tour</a>, 
+                        2012-{{ site.time |  date: "%Y" }}, All rights reserved.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- <script src="/js/bootstrap.js"></script> -->
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+    <script>
+        $(window).scroll(function () {
+            if ($(document).scrollTop() <= 25) {
+                $('.site-header .logo h1').removeClass('site-header-small');
+            } else {
+                $('.site-header .logo h1').addClass('site-header-small');
+            }
+        });
+
+        $('.site-header .menu-hover').hover( function() {
+            $('.menu-panel-wrapper').addClass('show');
+        }, function() {
+            $('.menu-panel-wrapper').removeClass('show');
+        });
+
+        $(function() {
+            $('.smooth-scroll a').click(function() {
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+                || location.hostname == this.hostname) {
+                    var target = $(this.hash);
+                    target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                    if (target.length) {
+                        $('html,body').animate({ scrollTop: target.offset().top - 150}, 1000);
+                        return false;
+                    }
+                }
+            });
+        });
+    </script>
+</footer>

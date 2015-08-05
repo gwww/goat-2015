@@ -1,0 +1,4 @@
+name: Gatineau-Ottawa Agile Tour
+markdown: kramdown
+permalink: /:year/:month/:title/
+url: http://www.goagiletour.ca

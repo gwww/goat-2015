@@ -1,0 +1,241 @@
+---
+---
+/* http://colorschemedesigner.com/#0C11Tw0w0w0w0 */
+
+@color-goat-subheader: #d0d0d0;
+@color-goat-header: #f0f0f0;
+
+.transition(@trans) {
+    -webkit-transition: @trans;
+    -moz-transition: @trans;
+    -o-transition: @trans;
+    transition: @trans;
+}
+
+.goat-title {
+    text-shadow: 1px 1px 1px rgba(0, 0, 0, 1);
+}
+
+html,
+body {
+    height: 100%;
+    width: 100%;
+}
+
+.site-header-bg {
+    color: #fff;
+    display: table;
+    height: 100%;
+    width: 100%;
+    position: relative;
+    background: url(/img/parliament-hill.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+    div {
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 1);
+        text-align: center;
+
+        h1 {
+            margin-top: 300px;
+        }
+    }
+}
+
+.site-header {
+    border-style: solid;
+    border-width: 0 0 1px;
+    position: fixed;
+    top: 0;
+    left: auto;
+    margin: 0 auto;
+    z-index: 9999;
+    background: @color-goat-header;
+    width: 100%;
+
+    .header-row {
+        width: 100%;
+        display: table;
+        table-layout: fixed;
+        padding: 0 8%;
+        margin: 10px 0;
+        @media (min-width: 768px) {
+            margin: 15px 0;
+        }
+        a {
+            font-size: 120%
+        }
+        .middle-20 {
+            display: table-cell;
+            vertical-align: middle;
+            width: 22%;
+        }
+
+        .middle-60 {
+            display: table-cell;
+            vertical-align: middle;
+            width: 56%;
+        }
+        .no-mobile {
+            @media (max-width: 768px) {
+                display: none;
+            }
+        }
+    }
+    a {
+        color: #444;
+        cursor: pointer;
+        text-transform: uppercase;
+        text-decoration: none;
+    }
+    .logo {
+        margin-top: -12px;
+        h1 {
+            font-size: 24px;
+            @media (min-width: 768px) {
+                font-size: 30px;
+            }
+            .transition(font-size .4s ease-in);
+        }
+        .site-header-small {
+            font-size: 16px;
+            @media (min-width: 768px) {
+                font-size: 20px;
+            }
+        }
+    }
+    .site-social-icons {
+        margin-bottom: 0;
+    }
+    .menu-panel-wrapper {
+        max-height: 0;
+        overflow: hidden;
+        background: @color-goat-subheader;
+        .transition(max-height 1.0s ease);
+        .menu-panel {
+            border-style: solid;
+            border-width: 1px 0 0;
+            padding: 10px 0;
+            ul { margin-bottom: 0; }
+        }
+        &.show { max-height: 999px; }
+    }
+}
+
+.site-header-padding {
+    padding-bottom: 75px;
+}
+
+.sitepage {
+    .logo {
+        margin-top: 8px;
+        height: 100px;
+        margin-bottom: 17px;
+    }
+
+    .page {
+        background: #fff;
+        font-size: 125%;
+        color: #444;
+        .content {
+            padding: 50px 65px;
+            h1, h2, h3, h4 {
+                font-weight: 300;
+            }
+        }
+    }
+}
+
+.coursepage {
+    .google-map {
+        position: relative;
+        padding-bottom: 75%; // This is the aspect ratio
+        height: 0;
+        overflow: hidden;
+    }
+    .google-map iframe {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100% !important;
+        height: 100% !important;
+    }
+}
+
+.register-btn {
+    font-size: 36px;
+    background-color: #006400;
+    padding: 12px 64px;
+}
+
+.about {
+    background: #b0e3ff;
+    color: #444;
+    padding: 50px 0;
+}
+
+.keynotes {
+    background: #2FA0D7;
+    color: #fff;
+    padding: 50px 0;
+
+    a { font-weight: 400; }
+
+    img {
+        max-width: 200px;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h2 { text-align: center; }
+
+    .bio {
+        margin-top: 20px;
+    }
+}
+
+.partners {
+    background: #fff;
+    padding: 50px 0;
+
+    table {
+        width: 100%;
+        @media (min-width: 768px) {
+            width: 80%;
+            margin-left: 10%;
+            margin-right: 10%;
+        }
+    }
+
+    table > tbody > tr > td {
+        vertical-align: middle;
+    }
+}
+
+.contact {
+    color: #fff;
+    background: #062d8f;
+    padding: 50px 0;
+
+    a {
+        color: #fff;
+        &:hover {
+            color: #fff;
+        }
+    }
+}
+
+.footer {
+    background: #393939;
+    color: #ccc;
+    padding: 20px 0 10px;
+    .links {
+        text-transform: uppercase;
+        .wider {
+            padding: 0 14px 0 14px;
+        }
+    }
+}
