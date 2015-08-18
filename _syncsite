@@ -1,4 +1,4 @@
 # From: http://nathangrigg.net/2012/04/rsyncing-jekyll/ this suggestion:
 rsync -v --compress --recursive --checksum --delete \
     --exclude=old \
-    _site/ root@westborosystems.com:/usr/local/www/goat
+    _site/ goat@westborosystems.com:/usr/local/www/goat
