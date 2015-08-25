@@ -1,0 +1,51 @@
+
+        <div class="row">
+            <div class="col-md-10 col-md-offset-1">
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="/img/person-richard-sheridan.jpg" class="text-center img-responsive">
+                        <h2>Richard Sheridan</h2>
+                        <p class="lead">
+                            From kid programmer in 1971 to Forbes cover story in
+                            2003, Joy, Inc. author Richard Sheridan has never shied from
+                            challenges, opportunities nor the limelight. While his focus has 
+                            always been around technology, his passion is actually process, 
+                            teamwork and organizational design, with one inordinately popular 
+                            goal: the Business Value of Joy! He is the CEO, Founder and Chief
+                            Storyteller at Menlo Innovations.  
+                        </p>
+                        <p class="lead">
+                            Website: <a href="http://www.menloinnovations.com/joyinc/">http://www.menloinnovations.com/joyinc/</a>
+                        </p>
+                        <p class="lead">
+                            Twitter: <a href="https://twitter.com/menloprez/">@menloprez</a>
+                        </p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="/img/person-gil-broza.jpg" class="text-center img-responsive">
+                        <h2>Gil Broza</h2>
+                        <p class="lead">
+                            Gil Broza helps software organizations build and lead engaged, solid, 
+                            high-performance Agile development teams. He guides teams and their leaders 
+                            in creating effective, humane, and responsible work environments so they 
+                            truly delight their customers and make a positive impact. He is an 
+                            “all-rounder”, working at all organizational levels and coaching people 
+                            in both technical and leadership behaviours.
+                        </p>
+                        <p class="lead">
+                            Gil's recently published book The Human Side of Agile: How to Help Your Team 
+                            Deliver is the definitive practical guide to leading Agile teams in the real 
+                            world. He has been a regular contributor and coaching stage producer for the 
+                            Agile series of conferences, a sought-after speaker for other industry events 
+                            and groups, and a host of numerous public webinars about Agility.
+                        </p>
+                        <p class="lead">
+                            Website: <a href="http://www.3pvantage.com/index.htm">http://www.3pvantage.com/</a>
+                        </p>
+                        <p class="lead">
+                            Twitter: <a href="https://twitter.com/gilbroza/">@gilbroza</a>
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
