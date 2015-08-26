@@ -4,7 +4,11 @@
 
         <div class="middle-60 text-center">
             <div class="logo-title logo">
-                <img src="/img/logo-goat.png">
+                {% if page.url contains '/en/' %}
+                    <img src="/img/logo-goat-en.png">
+                {% elsif page.url contains '/fr/' %}
+                    <img src="/img/logo-goat-fr.png">
+                {% endif %}
             </div>
         </div>
 
