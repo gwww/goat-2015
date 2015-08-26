@@ -7,8 +7,8 @@
                         <h1>Have a question? You can find us here...</h1>
                         <h3><a href="mailto:info@goagiletour.ca" title="Email us">info@goagiletour.ca</a></h3>
                     {% elsif page.url contains '/fr/' %}
-                        <h1>Have a question? You can find us here...</h1>
-                        <h3><a href="mailto:info@goagiletour.ca" title="Email us">info@goagiletour.ca</a></h3>
+                        <h1>Avez-vous des questions? Nous sommes là...</h1>
+                        <h3><a href="mailto:info@goagiletour.ca" title="Contactez-nous">info@goagiletour.ca</a></h3>
                     {% endif %}
                     <ul class="list-inline">
                         <li><a class="fa fa-twitter fa-lg fa-border"
@@ -27,9 +27,14 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center">
-                    <p class="small">&copy; 
-                        <a href="http://goagiletour.ca">Agile Ottawa and Gatineau-Ottawa Agile Tour</a>, 
+                    <p class="small">&copy;
+					{% if page.url contains '/en/' %}
+                       <a href="http://goagiletour.ca">Agile Ottawa and Gatineau-Ottawa Agile Tour</a>, 
                         2012-{{ site.time |  date: "%Y" }}, All rights reserved.
+                    {% elsif page.url contains '/fr/' %}
+                          <a href="http://goagiletour.ca">La tournée Agile de l'Outaouais</a>, 
+                        2012-{{ site.time |  date: "%Y" }}, Tout droits réservés.
+                    {% endif %}					
                     </p>
                 </div>
             </div>
