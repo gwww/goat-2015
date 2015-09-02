@@ -3,3 +3,4 @@ markdown: kramdown
 permalink: /:year/:month/:title/
 url: http://www.goagiletour.ca
 encoding: utf-8
+exclude: ['README.md', 'Gemfile.lock', 'Gemfile']
