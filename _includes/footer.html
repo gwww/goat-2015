@@ -27,18 +27,70 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-8 col-md-offset-2 text-center">
-                    <p class="small">&copy;
-					{% if page.url contains '/en/' %}
-                       <a href="http://goagiletour.ca">Agile Ottawa and Gatineau-Ottawa Agile Tour</a>, 
-                        2012-{{ site.time |  date: "%Y" }}, All rights reserved.
-                    {% elsif page.url contains '/fr/' %}
-                          <a href="http://goagiletour.ca">La tournée Agile de l'Outaouais</a>, 
-                        2012-{{ site.time |  date: "%Y" }}, Tout droits réservés.
-                    {% endif %}					
+                    <p class="small">
+                      &copy; {{ site.time |  date: "%Y" }}
+                      {% if page.url contains '/en/' %}
+                        Agile Ottawa and Gatineau-Ottawa Agile Tour,
+                        <a data-toggle="modal" data-target="#copyrightModal">All rights reserved.</a>
+                      {% elsif page.url contains '/fr/' %}
+                        La tournée Agile de l'Outaouais,
+                        <a data-toggle="modal" data-target="#copyrightModal">Tout droits réservés.</a>
+                      {% endif %}
                     </p>
                 </div>
             </div>
         </div>
+    </div>
+
+    <div id="copyrightModal" class="modal fade" tabindex="-1" role="dialog">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title">
+              {% if page.url contains '/en/' %}Copyright Disclaimer
+              {% elsif page.url contains '/fr/' %}Disclaimer du Droit D'Auteur
+              {% endif %}
+            </h4>
+          </div>
+          <div class="modal-body">
+            <p>
+              Copyright &copy; {{ site.time |  date: "%Y" }},
+              {% if page.url contains '/en/' %}Agile Ottawa and Gatineau-Ottawa Agile Tour.
+              {% elsif page.url contains '/fr/' %}
+                La tournée Agile de l'Outaouais.
+              {% endif %}
+            </p>
+            <p>
+              {% if page.url contains '/en/' %}
+                All rights reserved. No part of this website may be reproduced,
+                without the prior written permission of the publisher, except in the
+                case of brief quotations embodied in critical reviews and certain
+                other noncommercial uses permitted by copyright law. For permission
+                requests, contact the publisher.
+              {% elsif page.url contains '/fr/' %}
+                Tous droits réservés. Aucune partie de cette site Internet ne peut
+                être reproduite par quelque moyen que ce soit sans la permission
+                préalable de l’éditeur.
+              {% endif %}
+            </p>
+            <br />
+            <h5>
+              {% if page.url contains '/en/' %}Image Credits
+              {% elsif page.url contains '/fr/' %}Image Credits
+              {% endif %}
+            </h5>
+            <p>
+              <ul>
+                <li><a href="https://hr.wikipedia.org/wiki/Gatineau#/media/File:Gatineau_Museum_of_Civilization.jpg">Museum of Civilization </a></li>
+                <li><a href="https://en.wikipedia.org/wiki/Capital_Pathway#/media/File:Rideau_Canal.jpg">Rideau Canal</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/2014_shootings_at_Parliament_Hill,_Ottawa#/media/File:Centre_Block_-_Parliament_Hill.jpg">Parliament Hill</a></li>
+                <li><a href="https://en.wikipedia.org/wiki/File:Tulip_Festival_2006_-_Dow%27s_Lake_14.jpg">Tulips</a></li>
+              </ul>
+            </p>
+          </div>
+        </div>
+      </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
@@ -61,7 +113,7 @@
 
         $(function() {
             $('.smooth-scroll a').click(function() {
-                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') 
+                if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'')
                 || location.hostname == this.hostname) {
                     var target = $(this.hash);
                     target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
