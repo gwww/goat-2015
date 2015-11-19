@@ -94,8 +94,8 @@
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- <script src="/js/bootstrap.js"></script> -->
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js"></script>
+	<script src="/js/jquery.rwdImageMaps.min.js"></script>
     <script>
         $(window).scroll(function () {
             if ($(document).scrollTop() <= 25) {
@@ -130,5 +130,13 @@
             $(this).find(".card").toggleClass("flipped");
             return false;
         });
+
+		$(document).ready(function(e) {
+			$('img[usemap]').rwdImageMaps();
+			
+			<!-- $('area').on('click', function() { -->
+			<!-- 	alert($(this).attr('alt') + ' clicked'); -->
+			<!-- }); -->
+		});
     </script>
 </footer>
